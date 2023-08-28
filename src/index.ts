@@ -4,6 +4,7 @@ interface Color {
   green: number;
 }
 
+// Generic comment
 const color: Color = {
   red: 10,
   blue: 10,
