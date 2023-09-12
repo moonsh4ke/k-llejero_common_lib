@@ -3,8 +3,8 @@ import CustomError from './custom-error'
 export class NotFoundError extends CustomError {
   status = 404;
 
-  constructor(public message: string) {
-    super(message);
+  constructor() {
+    super("Resource not found");
     Object.setPrototypeOf(this, NotFoundError.prototype);
   }
 
