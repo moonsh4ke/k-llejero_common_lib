@@ -7,10 +7,10 @@ export const errorHandler = (
   res: Response,
   next: NextFunction
 ) => {
-  // console.log('Something went wrong', err);
-
-  //
   if (err instanceof CustomError) {
-    res.status(err.status).send(err.serializeError());
+    return res.status(err.status).send(err.serializeError());
   }
+
+  console.error(err);
+  return res.status(400).send('Something went wrong');
 }
